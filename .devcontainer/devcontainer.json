@@ -1,0 +1,17 @@
+{
+  "name": "Java & MySQL for Kaki Lima Jaya",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "features": {
+    "ghcr.io/devcontainers/features/mysql:1": {
+      "version": "latest",
+      "password": "kakilimajaya11"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack"
+      ]
+    }
+  }
+}
