@@ -1,17 +1,13 @@
 {
-  "name": "Java & MySQL for Kaki Lima Jaya",
-  "image": "mcr.microsoft.com/devcontainers/java:17",
-  "features": {
-    "ghcr.io/devcontainers/features/mysql:1": {
-      "version": "latest",
-      "password": "kakilimajaya11"
+    "name": "Kaki Lima Jaya (Docker Compose)",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack"
+            ]
+        }
     }
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "vscjava.vscode-java-pack"
-      ]
-    }
-  }
 }
