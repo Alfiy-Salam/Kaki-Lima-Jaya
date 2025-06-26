@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/java:0-17-bullseye
+    volumes:
+      # Hubungkan folder proyek kita ke folder workspace di dalam container
+      - ..:/workspace:cached
+    # Perintah ini untuk menjaga container tetap hidup
+    command: sleep infinity
+
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: kakilimajaya_db
+      MYSQL_USER: goodmini
+      MYSQL_PASSWORD: kakilimajaya11
+
+volumes:
+  mysql-data:
