@@ -1,12 +1,9 @@
 {
-  "name": "Kaki Lima Jaya (Java + MySQL)",
-  // Kita gunakan image Java yang sama seperti yang sedang dipakai sekarang
-  "image": "mcr.microsoft.com/devcontainers/java:0-17-bullseye",
-  
-  // Port yang ingin kita akses
-  "forwardPorts": [8080, 3306],
-  
-  // Ekstensi VS Code yang kita butuhkan
+  "name": "Kaki Lima Jaya (Compose)",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -14,5 +11,6 @@
         "vmware.vscode-spring-boot"
       ]
     }
-  }
+  },
+  "forwardPorts": [8080, 3306]
 }
