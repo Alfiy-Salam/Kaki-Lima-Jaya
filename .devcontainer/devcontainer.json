@@ -4,6 +4,13 @@
   "service": "app",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
+  
+"features": {
+    // Fitur ini akan menginstall Docker CLI di dalam container 'app' kita
+    "ghcr.io/devcontainers/features/docker-from-docker:1": {}
+  },
+
+
   "customizations": {
     "vscode": {
       "extensions": [
